@@ -1,47 +1,36 @@
-package vista;
+package vista.GestaoClientesPackage;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class RegistarCliente extends JFrame{
-
-    private JTextField textNome;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JPasswordField passwordField1;
-    private JPanel panelRegistar;
-    private JLabel labelNome;
-    private JLabel labelNif;
-    private JLabel labelMorada;
-    private JLabel labelTelemovel;
-    private JLabel labelMail;
-    private JLabel labelDataNascimento;
-    private JButton btnRegistar;
+public class DadosCliente extends JFrame{
+    private JPanel panelDadosCLiente;
+    private JButton btnEditar;
+    private JButton btnHistoricoTransacoes;
     private JButton btnVoltar;
+    private JTable tableDadosCliente;
 
-
-    public RegistarCliente() {
-        setContentPane(panelRegistar);
+    public  DadosCliente(){
+        setContentPane( panelDadosCLiente);
         // Destrói esta janela, removendo-a completamente da memória.
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         // Causes this Window to be sized to fit the preferred size and layoutsof its subcomponents.
         pack();
         setVisible(true);
 
-        btnRegistar.addActionListener(new ActionListener() {
+
+        btnHistoricoTransacoes.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               ClienteRegistado clienteRegistado=new ClienteRegistado();
-                clienteRegistado.setVisible(true);
+                HistoricoTransacoes historicoTransacoes=new HistoricoTransacoes();
+                historicoTransacoes.setVisible(true);
             }
         });
         btnVoltar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setContentPane(panelRegistar);
+                setContentPane( panelDadosCLiente);
                 // Destrói esta janela, removendo-a completamente da memória.
                 setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 // Causes this Window to be sized to fit the preferred size and layoutsof its subcomponents.
@@ -49,5 +38,13 @@ public class RegistarCliente extends JFrame{
                 setVisible(false);
             }
         });
+        btnEditar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EditarCliente editarCliente=new EditarCliente();
+                editarCliente.setVisible(true);
+            }
+        });
     }
+
 }

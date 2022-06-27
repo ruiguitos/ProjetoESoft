@@ -1,5 +1,7 @@
 package vista;
 
+import vista.GestaoClientesPackage.GestaoClientes;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,6 +33,13 @@ public class MenuPrincipal extends JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     System.exit(0);
+                }
+            });
+            btnGestaoStock.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    MenuPrincipal2 menuPrincipal2=new MenuPrincipal2();
+                    menuPrincipal2.setVisible(true);
                 }
             });
         }

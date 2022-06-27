@@ -1,4 +1,4 @@
-package vista;
+package vista.GestaoClientesPackage;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -27,6 +27,13 @@ public class GestaoClientes  extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 RegistarCliente registarCliente=new RegistarCliente();
                 registarCliente.setVisible(true);
+            }
+        });
+        btnConsultar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ConsultarCliente consultarCliente=new ConsultarCliente();
+                consultarCliente.setVisible(true);
             }
         });
         btnVoltar.addActionListener(new ActionListener() {
