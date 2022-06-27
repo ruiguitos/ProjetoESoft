@@ -9,11 +9,11 @@ public class MenuPrincipal2 extends JFrame{
     private JButton btnGestaoPecas;
     private JButton btnGestaoTransações;
 
-    private JPanel panelMenuPrincipal2;
+    private JPanel panelMenuprincipal2;
     private JButton btnVoltar;
 
     public MenuPrincipal2() {
-        setContentPane(panelMenuPrincipal2);
+        setContentPane(panelMenuprincipal2);
         // Destrói esta janela, removendo-a completamente da memória.
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         // Causes this Window to be sized to fit the preferred size and layoutsof its subcomponents.
@@ -24,7 +24,7 @@ public class MenuPrincipal2 extends JFrame{
         btnVoltar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setContentPane(panelMenuPrincipal2);
+                setContentPane(panelMenuprincipal2);
                 setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 pack();
                 setVisible(false);
