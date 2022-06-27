@@ -1,6 +1,10 @@
 package vista;
 
+<<<<<<< HEAD
 import vista.GestaoEventosPackage.GestaoDeEventos;
+=======
+import vista.GestaoPecasPackage.GestaoPeca;
+>>>>>>> 48922e2cb44379fd21820a4051321f209d411209
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -32,6 +36,7 @@ public class MenuPrincipal2 extends JFrame{
                 setVisible(false);
             }
         });
+<<<<<<< HEAD
 
         btnGestaoVeiculos.addActionListener(new ActionListener() {
             @Override
@@ -54,6 +59,13 @@ public class MenuPrincipal2 extends JFrame{
             public void actionPerformed(ActionEvent e) {
 //                GestaoDeTransacoes gestaoDeTransacoes=new GestaoDeTransacoes();
 //                gestaoDeTransacoes.setVisible(true);
+=======
+        btnGestaoPecas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GestaoPeca gestaoPeca=new GestaoPeca();
+                gestaoPeca.setVisible(true);
+>>>>>>> 48922e2cb44379fd21820a4051321f209d411209
             }
         });
     }
