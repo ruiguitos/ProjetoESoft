@@ -68,8 +68,8 @@ public class RegistarEventos extends JFrame {
         consultarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DescricaoEventos descricaoEventos = new DescricaoEventos();
-                descricaoEventos.setVisible(true);
+                DescricaoEventosPesquisa descricaoEventosPesquisa = new DescricaoEventosPesquisa();
+                descricaoEventosPesquisa.setVisible(true);
             }
         });
     }

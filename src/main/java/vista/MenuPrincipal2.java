@@ -1,6 +1,8 @@
 package vista;
 
+import vista.GestaoDeVeiculosPackage.GestaoDeVeiculos;
 import vista.GestaoPecasPackage.GestaoPeca;
+import vista.GestaoTransacoesPackage.GestaoTransacoes;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -28,23 +30,23 @@ public class MenuPrincipal2 extends JFrame {
         gestaoDeTransacoesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                GestaoDeTransacoes gestaoDeTransacoes=new GestaoDeTransacoes();
-//                gestaoDeTransacoes.setVisible(true);
+                GestaoTransacoes gestaoTransacoes=new GestaoTransacoes();
+                gestaoTransacoes.setVisible(true);
             }
         });
 
         gestaoDePecasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                GestaoDePecas gestaoDePecas=new GestaoDePecas();
-//                gestaoDePecas.setVisible(true);
+                GestaoPeca gestaoDePecas=new GestaoPeca();
+                gestaoDePecas.setVisible(true);
             }
         });
         gestaoDeVeiculosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                GestaoDeVeiculos gestaoDeVeiculos=new GestaoDeVeiculos();
-//                gestaoDeVeiculos.setVisible(true);
+                GestaoDeVeiculos gestaoVeiculos=new GestaoDeVeiculos();
+                gestaoVeiculos.setVisible(true);
             }
         });
 

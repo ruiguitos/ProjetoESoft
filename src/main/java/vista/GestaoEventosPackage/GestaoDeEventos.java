@@ -1,7 +1,5 @@
 package vista.GestaoEventosPackage;
 
-import vista.GestaoClientesPackage.RegistarCliente;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,8 +32,8 @@ public class GestaoDeEventos extends JFrame {
         descriçãoDeEventosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DescricaoEventos descricaoEventos = new DescricaoEventos();
-                descricaoEventos.setVisible(true);
+                DescricaoEventosPesquisa descricaoEventosPesquisa = new DescricaoEventosPesquisa();
+                descricaoEventosPesquisa.setVisible(true);
             }
         });
 

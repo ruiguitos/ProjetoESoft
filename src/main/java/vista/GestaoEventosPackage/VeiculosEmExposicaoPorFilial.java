@@ -3,26 +3,27 @@ package vista.GestaoEventosPackage;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseMotionAdapter;
 
-public class VeiculosEmExposicao extends JFrame {
-
-
-    private JPanel panelVeiculosExposicao;
-    private JButton voltarButton;
+public class VeiculosEmExposicaoPorFilial extends JFrame {
+    private JPanel JPanel;
+    private JPanel panelFilial;
     private JTable table1;
+    private JButton voltarButton;
     private JLabel table;
-    private JCheckBox checkBox1;
+    private JButton pesquisarButton;
     private JCheckBox checkBox2;
+    private JCheckBox checkBox6;
+    private JCheckBox checkBox5;
     private JCheckBox checkBox3;
     private JCheckBox checkBox4;
-    private JCheckBox checkBox5;
-    private JCheckBox checkBox6;
-    private JButton pesquisarButton;
+    private JCheckBox checkBox1;
     private JComboBox comboBox1;
 
-    public VeiculosEmExposicao(){
+    public VeiculosEmExposicaoPorFilial() {
 
-        setContentPane(panelVeiculosExposicao);
+
+        setContentPane(JPanel);
         // Destrói esta janela, removendo-a completamente da memória.
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         // Causes this Window to be sized to fit the preferred size and layoutsof its subcomponents.
@@ -33,7 +34,7 @@ public class VeiculosEmExposicao extends JFrame {
         voltarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setContentPane(panelVeiculosExposicao);
+                setContentPane(panelFilial);
                 // Destrói esta janela, removendo-a completamente da memória.
                 setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 // Causes this Window to be sized to fit the preferred size and layoutsof its subcomponents.
@@ -41,13 +42,15 @@ public class VeiculosEmExposicao extends JFrame {
                 setVisible(false);
             }
         });
-
         pesquisarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            VeiculosEmExposicaoPorData veiculosEmExposicaoPorData = new VeiculosEmExposicaoPorData();
-            veiculosEmExposicaoPorData.setVisible(true);
+                VeiculosEmExposicao veiculosEmExposicao = new VeiculosEmExposicao();
+                veiculosEmExposicao.setVisible(true);
             }
         });
     }
+
+
+
 }
