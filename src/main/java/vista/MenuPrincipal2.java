@@ -1,5 +1,7 @@
 package vista;
 
+import vista.GestaoPecasPackage.GestaoPeca;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,6 +30,13 @@ public class MenuPrincipal2 extends JFrame{
                 setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 pack();
                 setVisible(false);
+            }
+        });
+        btnGestaoPecas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GestaoPeca gestaoPeca=new GestaoPeca();
+                gestaoPeca.setVisible(true);
             }
         });
     }
