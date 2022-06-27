@@ -1,7 +1,5 @@
 package vista.GestaoPecasPackage;
 
-import vista.MenuPrincipal2;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
