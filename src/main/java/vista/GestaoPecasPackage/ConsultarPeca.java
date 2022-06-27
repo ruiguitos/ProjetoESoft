@@ -1,6 +1,8 @@
 package vista.GestaoPecasPackage;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ConsultarPeca extends JFrame {
 
@@ -20,6 +22,15 @@ public class ConsultarPeca extends JFrame {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         pack();
         setVisible(true);
+        btnVoltar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setContentPane(panelConsultarPeca);
+                setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                pack();
+                setVisible(false);
+            }
+        });
     }
 
 }

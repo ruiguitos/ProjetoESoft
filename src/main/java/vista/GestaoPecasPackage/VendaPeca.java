@@ -1,6 +1,8 @@
 package vista.GestaoPecasPackage;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class VendaPeca extends JFrame {
 
@@ -17,6 +19,15 @@ public class VendaPeca extends JFrame {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         pack();
         setVisible(true);
+        btnVoltar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setContentPane(panelVendaPeca);
+                setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                pack();
+                setVisible(false);
+            }
+        });
     }
 
 }
