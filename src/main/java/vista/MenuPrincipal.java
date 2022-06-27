@@ -1,6 +1,8 @@
 package vista;
 
 import vista.GestaoClientesPackage.GestaoClientes;
+import vista.GestaoEstatisticasPackage.GestaoEstatisticas;
+import vista.GestaoEventosPackage.GestaoDeEventos;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -20,6 +22,13 @@ public class MenuPrincipal extends JFrame {
         setContentPane(jpanelMenuPrincipal);
         pack();
 
+            btnGestaoStock.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    MenuPrincipal2 menuPrincipal2=new MenuPrincipal2();
+                    menuPrincipal2.setVisible(true);
+                }
+            });
 
             btnGestaoClientes.addActionListener(new ActionListener() {
                 @Override
@@ -29,19 +38,29 @@ public class MenuPrincipal extends JFrame {
                 }
             });
 
+            btnGestaoEstatisticas.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    GestaoEstatisticas gestaoEstatisticas = new GestaoEstatisticas();
+                    gestaoEstatisticas.setVisible(true);
+                }
+            });
+
+            btnGestaoEventos.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    GestaoDeEventos gestaoDeEventos = new GestaoDeEventos();
+                    gestaoDeEventos.setVisible(true);
+                }
+            });
+
             btnSair.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     System.exit(0);
                 }
             });
-            btnGestaoStock.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    MenuPrincipal2 menuPrincipal2=new MenuPrincipal2();
-                    menuPrincipal2.setVisible(true);
-                }
-            });
+
         }
 
     public static void main(String[] args) {

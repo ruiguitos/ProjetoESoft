@@ -1,5 +1,7 @@
 package vista;
 
+import vista.GestaoEventosPackage.GestaoDeEventos;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,6 +30,30 @@ public class MenuPrincipal2 extends JFrame{
                 setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 pack();
                 setVisible(false);
+            }
+        });
+
+        btnGestaoVeiculos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//                GestaoDeVeiculos gestaoDeVeiculos=new GestaoDeVeiculos();
+//                gestaoDeVeiculos.setVisible(true);
+            }
+        });
+
+        btnGestaoPecas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//                GestaoDePecas gestaoDePecas=new GestaoDePecas();
+//                gestaoDePecas.setVisible(true);
+            }
+        });
+
+        btnGestaoTransações.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//                GestaoDeTransacoes gestaoDeTransacoes=new GestaoDeTransacoes();
+//                gestaoDeTransacoes.setVisible(true);
             }
         });
     }
